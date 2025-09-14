@@ -1,0 +1,6 @@
+build
+dist
+GeophPy.egg-info
+__pycache__
+geophpy.egg-info
+.pytest_cache

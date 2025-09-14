@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geophpy"
+version = "0.35.0"
+description = "Tools for sub-surface geophysical data processing"
+authors = [
+    { name="Lionel Darras", email="lionel.darras@mom.fr" },
+    { name="Quentin Vitale", email="quentin.vitale@eveha.fr" }, 
+    { name="Philippe Marty"},
+]
+maintainers = [
+    { name="Quentin Vitale", email="quentin.vitale@eveha.fr" }, 
+    { name="Lionel Darras", email="lionel.darras@mom.fr" },
+]
+# Dans pyproject.toml, sous la section [project]
+classifiers=[
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Utilities",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "netcdf4",
+    "matplotlib>=1.5",
+    "numpy",
+    "scipy",
+    "gstlearn",
+    "pandas>=2.1.0",
+    "pillow",
+    "pyshp",
+    "simplekml",
+    "utm",
+    "scikit-learn",
+    "scikit-image",
+    "ipython"
+]
+
+[project.optional-dependencies]
+docs = [
+    "Sphinx>=1.4.3",
+    "sphinx-rtd-theme",
+]
+
+[project.urls]
+Homepage = "https://github.com/QuentinVitale/geophpy"
+Documentation = "https://github.com/QuentinVitale/geophpy/tree/main/docs"
+Source = "https://github.com/QuentinVitale/geophpy"
+
+[tool.setuptools]
+packages = ["geophpy"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+geophpy = ["*.txt", "*.csv", "*.json"]

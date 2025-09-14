@@ -1,0 +1,8 @@
+recursive-include geophpy/help/html *
+recursive-include geophpy/help/pdf *
+recursive-include docs *
+recursive-include geophpy/plotting/colormapicons *
+include AUTHORS.rst
+include CHANGES.rst
+include README.rst
+include COPYING
